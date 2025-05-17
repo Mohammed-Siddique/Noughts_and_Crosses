@@ -8,6 +8,10 @@ body{
     text-align: center;
 }
 
+.main-heading{
+    padding: 2rem;
+}
+
 .main-container{
     background-color: #d3d1d1;
     height: 100vh;
@@ -40,4 +44,16 @@ body{
             }
         }
     }
+}
+
+.resetbtn{
+    width: 20vw;
+    height: auto;
+    margin: 3rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 1rem;
 }
