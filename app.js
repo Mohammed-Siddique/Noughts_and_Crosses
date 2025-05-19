@@ -22,10 +22,9 @@ boxBtn.forEach((box) => {
             turn0 = true
         }
         box.disabled = true;
-
+        
         gameWinner();
     });
-
 });
 
 const gameWinner = ()=> {
@@ -36,12 +35,11 @@ const gameWinner = ()=> {
         
         if (val1 != "" && val2 != "" && val3 != "") {
             if (val1 === val2 && val2 === val3) {
-                console.log('Winner!')
+                console.log('Winner!', val1)
             }
         } 
-    }
-    
-}
+    }   
+};
 
 
 
