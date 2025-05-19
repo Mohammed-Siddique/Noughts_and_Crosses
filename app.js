@@ -1,6 +1,17 @@
 let boxBtn = document.querySelectorAll('#box');
 let turn0 = true;
 
+const winPattern = [
+    [0, 1, 2],
+    [0, 3, 6],
+    [0, 4, 5],
+    [1, 4, 7],
+    [2, 4, 6],
+    [2, 5, 8],
+    [3, 4, 5],
+    [6, 7, 8]
+]
+
 boxBtn.forEach((box) => {
     box.addEventListener('click', () => {
         if (turn0) {
@@ -11,8 +22,31 @@ boxBtn.forEach((box) => {
             turn0 = true
         }
         box.disabled = true;
-    })
-})
+
+        gameWinner();
+    });
+
+});
+
+const gameWinner = ()=> {
+    for (let pattern of winPattern) { 
+        let val1 =  boxBtn[pattern[0]].textContent;
+        let val2 =  boxBtn[pattern[1]].textContent; 
+        let val3 =  boxBtn[pattern[2]].textContent
+        
+        if (val1 != "" && val2 != "" && val3 != "") {
+            if (val1 === val2 && val2 === val3) {
+                console.log('Winner!')
+            }
+        } 
+    }
+    
+}
+
+
+
+
+
 
 
 
