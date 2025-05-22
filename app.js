@@ -1,4 +1,5 @@
 let boxBtn = document.querySelectorAll('#box');
+let resetBtn = document.querySelector('.reset');
 let turn0 = true;
 
 const winPattern = [
@@ -41,6 +42,15 @@ const gameWinner = ()=> {
     }   
 };
 
+const resetButton = ()=> {
+    resetBtn.addEventListener('click', () => {
+        boxBtn.forEach((box) => {
+            box.textContent = "";
+        })
+    })  
+};
+
+resetButton();
 
 
 
