@@ -1,5 +1,6 @@
 let boxBtn = document.querySelectorAll('#box');
 let resetBtn = document.querySelector('.reset');
+let msgContainer = document.querySelector('.msg-container');
 let turn0 = true;
 
 const winPattern = [
@@ -25,6 +26,7 @@ boxBtn.forEach((box) => {
         box.disabled = true;
         
         gameWinner();
+        
     });
 });
 
@@ -38,7 +40,10 @@ const gameWinner = ()=> {
             if (val1 === val2 && val2 === val3) {
                 console.log('Winner!', val1)
             }
-        } 
+        };
+        // set attribute for displaying the msg 
+        msgContainer.setAttribute('class', 'winner-msg')
+
     }   
 };
 
@@ -51,6 +56,8 @@ const resetButton = ()=> {
 };
 
 resetButton();
+
+
 
 
 
