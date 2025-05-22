@@ -40,7 +40,7 @@ const gameWinner = ()=> {
         if (val1 != "" && val2 != "" && val3 != "") {
             if (val1 === val2 && val2 === val3) {
                 console.log('Winner!', val1)
-                msgContainer.setAttribute('class', 'winner-msg')
+                msgContainer.removeAttribute('class', 'block-container')
             }
         };   
     }   
