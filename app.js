@@ -30,6 +30,7 @@ boxBtn.forEach((box) => {
     });
 });
 
+
 const gameWinner = ()=> {
     for (let pattern of winPattern) { 
         let val1 =  boxBtn[pattern[0]].textContent;
@@ -39,11 +40,9 @@ const gameWinner = ()=> {
         if (val1 != "" && val2 != "" && val3 != "") {
             if (val1 === val2 && val2 === val3) {
                 console.log('Winner!', val1)
+                msgContainer.setAttribute('class', 'winner-msg')
             }
-        };
-        // set attribute for displaying the msg 
-        msgContainer.setAttribute('class', 'winner-msg')
-
+        };   
     }   
 };
 

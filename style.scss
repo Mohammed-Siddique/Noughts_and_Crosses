@@ -68,10 +68,13 @@ body{
     border-radius: 1rem;
 }
 
-.msg-container{
+.block-container{
     display: none;
-    // border: 1px solid black;
-    .block-msg{
+}
+
+.msg-container{
+    border: 1px solid black;
+    .show-msg{
         display: flex;
         flex-direction: row;
         text-align: center;
@@ -94,4 +97,5 @@ body{
         border-radius: 1rem;
     }
 }
+
 
