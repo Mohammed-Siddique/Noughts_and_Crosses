@@ -69,7 +69,8 @@ body{
 }
 
 .msg-container{
-    border: 1px solid black;
+    display: none;
+    // border: 1px solid black;
     .winner-msg{
         display: flex;
         flex-direction: row;
