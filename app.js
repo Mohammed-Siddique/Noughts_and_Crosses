@@ -1,6 +1,8 @@
 let boxBtn = document.querySelectorAll('#box');
 let resetBtn = document.querySelector('.reset');
 let msgContainer = document.querySelector('.msg-container');
+let secondContainer = document.querySelector('.second-container');
+let mainHeading = document.querySelector('main-heading');
 let turn0 = true;
 
 const winPattern = [
@@ -40,7 +42,8 @@ const gameWinner = ()=> {
         if (val1 != "" && val2 != "" && val3 != "") {
             if (val1 === val2 && val2 === val3) {
                 console.log('Winner!', val1)
-                msgContainer.removeAttribute('class', 'block-container')
+                msgContainer.removeAttribute('class', 'block-container');
+                secondContainer.setAttribute('class', 'block-second-container');  
             }
         };   
     }   
