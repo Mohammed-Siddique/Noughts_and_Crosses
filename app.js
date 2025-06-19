@@ -24,6 +24,14 @@ boxes.forEach((box) => {
             box.textContent = "X";
             turn = true;
         }
-        box.disabled = true;
+        box.disabled = true; 
+
+        checkWinner();
     })
 })
+
+const checkWinner = () => {
+    for(let pattern of winPatterns) {
+        console.log(pattern[0], pattern[1], pattern[2])
+    }
+}
